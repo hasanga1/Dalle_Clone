@@ -1,5 +1,3 @@
-import React from "react";
-
 const FormField = ({
   LabelName,
   type,
@@ -13,12 +11,14 @@ const FormField = ({
   return (
     <div>
       <div className="flex items-center gap-2 mb-2">
+
         <label
           htmlFor={name}
           className="block text-sm font-medium text-grey-900"
         >
           {LabelName}
         </label>
+
         {isSurpriseMe && (
           <button type="button"
           onClick={handleSupriseMe}
@@ -26,6 +26,7 @@ const FormField = ({
             Surprise Me
           </button>
         )}
+        
       </div>
       <input
         type={type}
