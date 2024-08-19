@@ -1,21 +1,20 @@
 import { download } from '../assets'
 import { downloadImage } from '../utils'
 
-
-const Card = ({_id, name, prompt, photo}) => {
+const Card = ({ _id, name, prompt, photo }) => {
   return (
-    <div className='rounded-xl group relative shadow-card hover:shadow-cardhover card'>
-      <img className='w-full h-auto object-cover rounded-xl' src={photo} alt={prompt}/>
-      <div className='group-hover:flex flex-col max-h-[94.5%] hidden absolute bottom-0 left-0 right-0 bg[#1013f] m-2 p-4 rounded-md bg-white'>
-        <p className='text-black text-sm overflow-y-auto prompt'>{prompt}</p>
-        <div className='mt-5 flex justify-between items-center gap-2'>
-          <div className='flex items-center gap-2'>
-            <div>
-              {name}
-            </div>
-          </div>
-          <button type='button' onClick={() => downloadImage(_id, photo)}>
-            download
+    <div className="relative rounded-lg overflow-hidden shadow-lg group transition-transform transform hover:scale-105 hover:shadow-xl">
+      <img className="w-full h-auto object-cover" src={photo} alt={prompt} />
+      <div className="absolute inset-0 bg-white bg-opacity-90 flex flex-col justify-between p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <p className="text-gray-800 text-base mb-4">{prompt}</p>
+        <div className="flex justify-between items-center">
+          <span className="text-gray-600 text-sm">{name}</span>
+          <button
+            type="button"
+            onClick={() => downloadImage(_id, photo)}
+            className="bg-gray-800 text-white px-3 py-1 rounded-md text-sm hover:bg-gray-700 transition-colors"
+          >
+            Download
           </button>
         </div>
       </div>
