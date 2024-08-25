@@ -3,7 +3,7 @@
 
 ## Screenshots
 
-![App Screenshot](https://drive.google.com/file/d/14mF94U0gvqEHYOWWo7xPrfUQBycm7j2h/view?usp=share_link)
+<img width="1440" alt="Screenshot 2024-08-25 at 18 37 14 (2)" src="https://github.com/user-attachments/assets/847716fa-ba30-4db8-b444-855403628155">
 
 
 ## Introduction
